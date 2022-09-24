@@ -1,0 +1,48 @@
+// ---------------------------------------------
+// ------------------FONTS----------------------
+// ---------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;700&display=swap');
+
+$font-kaushan: 'Kaushan Script', cursive;
+$font-montserrat: 'Montserrat', sans-serif;
+
+// ---------------------------------------------
+// ------------------COLORS---------------------
+// ---------------------------------------------
+$red: #f38181;
+$yellow: #fce38a;
+$green: #95e1d3;
+$dark: #333;
+$silver: #999999;
+$white: #fff;
+
+// ---------------------------------------------
+// ------------------MIXINS---------------------
+// ---------------------------------------------
+@mixin transition($props, $duration, $timing-function) {
+	transition: $props $duration $timing-function;
+	-webkit-transition: $props $duration $timing-function;
+	-moz-transition: $props $duration $timing-function;
+	-ms-transition: $props $duration $timing-function;
+	-o-transition: $props $duration $timing-function;
+}
+
+// ---------------------------------------------
+// ---------------PLACEHOLDERS------------------
+// ---------------------------------------------
+%header-navbar-item {
+	color: #fff;
+	font-size: 0.9rem;
+	margin: 0 0 0 3rem;
+	cursor: pointer;
+
+	&:hover {
+		color: $yellow;
+	}
+
+	&,
+	&::before,
+	&::after {
+		@include transition(all, 0.3s, ease);
+	}
+}
