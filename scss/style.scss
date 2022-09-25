@@ -24,6 +24,7 @@
 	position: relative;
 	max-width: 1250px;
 	margin: auto;
+	padding: 0 1.5rem;
 }
 
 // ---------------------------------------------
@@ -35,6 +36,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 
 	&__navbar {
 		position: absolute;
@@ -133,7 +135,7 @@
 		&::after {
 			content: '';
 			display: block;
-			margin: 60px auto 0;
+			margin: 4rem auto 0;
 			height: 3px;
 			width: 60px;
 			background-color: $white;
@@ -202,5 +204,118 @@
 			top: -3px;
 			background-color: $red;
 		}
+	}
+}
+
+// ---------------------------------------------
+// -----------------ABOUT US--------------------
+// ---------------------------------------------
+.about {
+	&__top-text {
+		padding-top: 6rem;
+	}
+
+	&__gallery-about {
+		padding: 6rem 0 6.6rem;
+	}
+}
+
+.top-text {
+	max-width: 950px;
+	margin: auto;
+	text-align: center;
+
+	&__subtitle {
+		font-family: $font-kaushan;
+		font-size: 1.6rem;
+		color: $dark;
+		margin-bottom: 1rem;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	&__title {
+		color: $dark;
+		font-weight: 700;
+		font-size: 2rem;
+		text-transform: uppercase;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 60px;
+			height: 3px;
+			margin: 2.5rem auto;
+			background-color: $red;
+		}
+	}
+
+	&__description {
+		font-size: 1rem;
+		font-family: $font-roboto;
+		line-height: 1.6rem;
+	}
+}
+
+.gallery-about {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+
+	&__item {
+		max-width: 380px;
+		background-color: $green;
+	}
+
+	&__image-container {
+		background: linear-gradient(to bottom, $red, $yellow);
+		cursor: pointer;
+		position: relative;
+
+		@include transition(all, 0.3s, ease);
+
+		&:hover {
+			@include translate(-10px, -10px);
+		}
+	}
+
+	&__image-container:hover &__image {
+		opacity: 0.1;
+	}
+
+	&__image-container:hover &__content {
+		opacity: 1;
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		text-align: center;
+		opacity: 0;
+
+		@include translate(-50%, -50%);
+		@include transition(all, 0.2s, ease);
+	}
+
+	&__image {
+		display: block;
+
+		@include transition(all, 0.3s, ease);
+	}
+
+	&__title {
+		color: $white;
+		font-weight: 700;
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		margin-top: 0.6rem;
+	}
+
+	&__icon {
+		color: $white;
 	}
 }

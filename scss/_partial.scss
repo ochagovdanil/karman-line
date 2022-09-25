@@ -1,10 +1,11 @@
 // ---------------------------------------------
 // ------------------FONTS----------------------
 // ---------------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;700&family=Roboto&display=swap');
 
 $font-kaushan: 'Kaushan Script', cursive;
 $font-montserrat: 'Montserrat', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
 
 // ---------------------------------------------
 // ------------------COLORS---------------------
@@ -25,6 +26,14 @@ $white: #fff;
 	-moz-transition: $props $duration $timing-function;
 	-ms-transition: $props $duration $timing-function;
 	-o-transition: $props $duration $timing-function;
+}
+
+@mixin translate($x, $y: 0, $z: 0) {
+	transform: translate3d($x, $y, $z);
+	-webkit-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-ms-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
 }
 
 // ---------------------------------------------
