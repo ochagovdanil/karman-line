@@ -319,3 +319,37 @@
 		color: $white;
 	}
 }
+
+// ---------------------------------------------
+// -----------------STATISTICS------------------
+// ---------------------------------------------
+.statistics {
+	background-color: $green;
+
+	&__item {
+		text-align: center;
+		padding: 6rem 0;
+		border-left: 1px solid $white-alpha;
+	}
+
+	&__item:last-child {
+		border-right: 1px solid $white-alpha;
+	}
+
+	&__text {
+		color: $white;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+
+		&--big {
+			font-weight: 700;
+			font-size: 4.8rem;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.statistics-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
