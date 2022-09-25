@@ -353,3 +353,45 @@
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 }
+
+// ---------------------------------------------
+// ------------------SERVICES-------------------
+// ---------------------------------------------
+.services {
+	&__top-text {
+		padding-top: 6.6rem;
+	}
+
+	&__item {
+		background-color: #fff;
+		padding: 2.6rem 1.3rem;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__icon {
+		color: $green;
+		padding-right: 1.3rem;
+	}
+
+	&__title {
+		font-size: 0.9rem;
+		color: $dark;
+		text-transform: uppercase;
+	}
+
+	&__description {
+		font-family: $font-roboto;
+		font-size: 1rem;
+		color: $silver;
+		margin-top: 0.6rem;
+	}
+}
+
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+	row-gap: 1px;
+	background-color: $silver-light;
+	margin-bottom: 5rem;
+}
