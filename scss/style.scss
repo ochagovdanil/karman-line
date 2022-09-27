@@ -431,3 +431,88 @@
 		@include translate(0, 5%);
 	}
 }
+
+// ---------------------------------------------
+// -----------------WHAT WE DO------------------
+// ---------------------------------------------
+.we-do {
+	&__top-text {
+		padding-top: 7.6rem;
+	}
+
+	&__image {
+		max-width: 100%;
+	}
+}
+
+.we-do-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	gap: 2rem;
+	padding: 6rem 0 7.3rem;
+}
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+
+	&__icon {
+		position: absolute;
+		color: $green;
+		left: 1rem;
+		top: 50%;
+
+		@include translate(0, -50%);
+
+		&-up,
+		&-down {
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+
+			@include translate(0, -50%);
+
+			&--active {
+				display: block;
+			}
+
+			&--inactive {
+				display: none;
+			}
+		}
+	}
+
+	&__header {
+		position: relative;
+		border: 1px solid $silver-light;
+		padding: 1rem;
+		cursor: pointer;
+	}
+
+	&__title {
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: $dark;
+		margin-left: 2.5rem;
+	}
+
+	&__content {
+		font-size: 1rem;
+		font-family: $font-roboto;
+		font-weight: 300;
+		font-style: italic;
+		padding: 1.3rem;
+		border: 1px solid $silver-light;
+		border-top: none;
+		display: none;
+
+		&--show {
+			display: block;
+		}
+
+		&--hide {
+			display: none;
+		}
+	}
+}
