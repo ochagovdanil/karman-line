@@ -17,6 +17,7 @@ $white-alpha: rgb(255, 255, 255, 0.3);
 $dark: #333;
 $silver: #999999;
 $silver-light: #e5e5e5;
+$gray: #f8f8f8;
 $white: #fff;
 
 // ---------------------------------------------
@@ -56,4 +57,12 @@ $white: #fff;
 	&::after {
 		@include transition(all, 0.3s, ease);
 	}
+}
+
+%slider-button {
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+
+	@include translate(0, -50%);
 }

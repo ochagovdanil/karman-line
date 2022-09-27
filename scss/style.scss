@@ -516,3 +516,69 @@
 		}
 	}
 }
+
+// ---------------------------------------------
+// ------------------REVIEWS--------------------
+// ---------------------------------------------
+.reviews {
+	&--gray {
+		background-color: $gray;
+	}
+
+	&__icon {
+		max-width: 100%;
+		border: 3px solid $green;
+		padding: 2.6rem;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		font-style: italic;
+		font-family: $font-roboto;
+		font-weight: 300;
+		margin-bottom: 1.5rem;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		font-family: $font-kaushan;
+		text-transform: capitalize;
+		color: $dark;
+		padding-left: 4.7rem;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 60px;
+			background-color: $red;
+			left: 0;
+			top: 50%;
+
+			@include translate(0, -50%);
+		}
+	}
+
+	&__slider-left {
+		left: 1.3rem;
+
+		@extend %slider-button;
+	}
+
+	&__slider-right {
+		right: 1.3rem;
+
+		@extend %slider-button;
+	}
+}
+
+.reviews-grid {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	gap: 4rem;
+	align-items: center;
+	padding: 4.6rem 6.6rem;
+}
