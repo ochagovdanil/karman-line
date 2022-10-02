@@ -698,3 +698,18 @@
 		color: $red;
 	}
 }
+
+// ---------------------------------------------
+// --------------------LOGOS--------------------
+// ---------------------------------------------
+.logos {
+	background-color: $gray;
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4rem;
+		padding: 4rem 0;
+	}
+}
