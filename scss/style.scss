@@ -518,7 +518,7 @@
 }
 
 // ---------------------------------------------
-// ------------------REVIEWS--------------------
+// ----------------REVIEWS GRAY-----------------
 // ---------------------------------------------
 .reviews {
 	&--gray {
@@ -581,4 +581,120 @@
 	gap: 4rem;
 	align-items: center;
 	padding: 4.6rem 6.6rem;
+}
+
+// ---------------------------------------------
+// ----------------MEET OUR TEAM----------------
+// ---------------------------------------------
+.team {
+	&__top-text {
+		padding-top: 6.6rem;
+	}
+
+	&__gallery-team {
+		padding: 6.3rem 0 7.6rem;
+	}
+}
+
+.gallery-team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3rem;
+
+	&__item {
+		max-width: 380px;
+
+		&-wrapper {
+			background-color: $green;
+		}
+	}
+
+	&__image-container {
+		background: linear-gradient(to bottom, $red, $yellow);
+		cursor: pointer;
+		position: relative;
+
+		@include transition(all, 0.3s, ease);
+
+		&:hover {
+			@include translate(-10px, -10px);
+		}
+	}
+
+	&__image-container:hover &__image {
+		opacity: 0.1;
+	}
+
+	&__image-container:hover .social {
+		opacity: 1;
+	}
+
+	&__social {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		@include translate(-50%, -50%);
+	}
+
+	&__image {
+		display: block;
+
+		@include transition(all, 0.3s, ease);
+	}
+
+	&__description {
+		text-align: center;
+		padding-top: 2rem;
+	}
+
+	&__name {
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $dark;
+	}
+
+	&__job-title {
+		font-family: $font-roboto;
+		font-style: italic;
+		font-size: 1rem;
+		text-transform: capitalize;
+		padding-top: 0.6rem;
+	}
+}
+
+.social {
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+
+	@include transition(all, 0.2s, ease);
+
+	&__item {
+		width: 55px;
+		text-align: center;
+		background-color: $yellow;
+		padding: 1rem;
+		border-right: 1px solid $red;
+
+		@include transition(all, 0.2s, ease);
+
+		&:hover {
+			background-color: $red;
+		}
+	}
+
+	&__item:hover &__icon {
+		color: $white;
+	}
+
+	&__item:last-child {
+		border-right: none;
+	}
+
+	&__icon {
+		color: $red;
+	}
 }
