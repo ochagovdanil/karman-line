@@ -518,17 +518,28 @@
 }
 
 // ---------------------------------------------
-// ----------------REVIEWS GRAY-----------------
+// ------------------REVIEWS--------------------
 // ---------------------------------------------
 .reviews {
 	&--gray {
 		background-color: $gray;
 	}
 
+	&--white {
+		background-color: $white;
+	}
+
 	&__icon {
 		max-width: 100%;
-		border: 3px solid $green;
-		padding: 2.6rem;
+
+		&--message {
+			border: 3px solid $green;
+			padding: 2.6rem;
+		}
+
+		&--human {
+			@include border-radius(50%);
+		}
 	}
 
 	&__text {
