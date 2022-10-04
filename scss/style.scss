@@ -843,3 +843,20 @@
 		}
 	}
 }
+
+// ---------------------------------------------
+// -----------------FOOTER----------------------
+// ---------------------------------------------
+.footer {
+	&__title {
+		text-align: center;
+		font-size: 0.9rem;
+		color: $dark;
+		padding: 1.3rem 0;
+
+		&--red {
+			text-decoration: none;
+			color: $red;
+		}
+	}
+}
