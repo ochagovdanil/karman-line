@@ -795,3 +795,51 @@
 		font-style: italic;
 	}
 }
+
+// ---------------------------------------------
+// -----------------OPEN MAP--------------------
+// ---------------------------------------------
+.map {
+	background-image: url('../img/open-map.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+	cursor: pointer;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $white-alpha-map;
+		z-index: 1;
+	}
+
+	&__content {
+		text-align: center;
+		color: $red;
+		padding: 3.3em 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-top: 1.2rem;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 3px;
+			width: 60px;
+			background-color: $red;
+			margin: 1.5rem auto 0;
+		}
+	}
+}
