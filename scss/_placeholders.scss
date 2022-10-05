@@ -1,0 +1,32 @@
+@use 'colors';
+@use 'mixins';
+
+%header-navbar-item {
+	color: colors.$white;
+	font-size: 0.9rem;
+	margin: 0 0 0 3rem;
+	cursor: pointer;
+
+	&:hover {
+		color: colors.$yellow;
+	}
+
+	&,
+	&::before,
+	&::after {
+		@include mixins.transition(all, 0.3s, ease);
+	}
+}
+
+%slider-button {
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+
+	@include mixins.translate(0, -50%);
+	@include mixins.transition(all, 0.3s, ease);
+
+	&:hover {
+		color: colors.$red;
+	}
+}
