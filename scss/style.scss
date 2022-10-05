@@ -268,6 +268,8 @@
 	&__item {
 		max-width: 380px;
 		background-color: $green;
+
+		@include border-radius(7px);
 	}
 
 	&__image-container {
@@ -276,6 +278,7 @@
 		position: relative;
 
 		@include transition(all, 0.3s, ease);
+		@include border-radius(7px);
 
 		&:hover {
 			@include translate(-10px, -10px);
@@ -305,6 +308,7 @@
 		display: block;
 
 		@include transition(all, 0.3s, ease);
+		@include border-radius(7px);
 	}
 
 	&__title {
@@ -442,6 +446,8 @@
 
 	&__image {
 		max-width: 100%;
+
+		@include border-radius(7px);
 	}
 }
 
@@ -488,6 +494,12 @@
 		border: 1px solid $silver-light;
 		padding: 1rem;
 		cursor: pointer;
+
+		@include transition(all, 0.3s, ease);
+
+		&:hover {
+			background-color: $silver-light;
+		}
 	}
 
 	&__title {
@@ -618,6 +630,8 @@
 
 		&-wrapper {
 			background-color: $green;
+
+			@include border-radius(7px);
 		}
 	}
 
@@ -626,6 +640,7 @@
 		cursor: pointer;
 		position: relative;
 
+		@include border-radius(7px);
 		@include transition(all, 0.3s, ease);
 
 		&:hover {
@@ -652,6 +667,7 @@
 	&__image {
 		display: block;
 
+		@include border-radius(7px);
 		@include transition(all, 0.3s, ease);
 	}
 
@@ -857,6 +873,39 @@
 		&--red {
 			text-decoration: none;
 			color: $red;
+
+			@include transition(all, 0.3s, ease);
+
+			&:hover {
+				color: $dark;
+			}
 		}
+	}
+}
+
+// ---------------------------------------------
+// ------------TO THE TOP BUTTON----------------
+// ---------------------------------------------
+.button-top {
+	background-color: $red;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1rem;
+	margin: 1rem;
+	box-shadow: 0 0 10px $button-top-shadow;
+	z-index: 999;
+	cursor: pointer;
+	display: none;
+
+	@include border-radius(50%);
+	@include transition(all, 0.3s, ease);
+
+	&:hover {
+		background-color: $red-dark;
+	}
+
+	&__icon {
+		color: $white;
 	}
 }
