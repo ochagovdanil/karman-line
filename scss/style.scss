@@ -43,7 +43,7 @@
 
 	&__navbar {
 		position: absolute;
-		top: 2rem;
+		top: 1rem;
 		left: 0;
 		right: 0;
 		padding: 0 1.5rem;
@@ -51,7 +51,7 @@
 
 	&__navbar-slider {
 		position: absolute;
-		bottom: 2rem;
+		bottom: 1rem;
 		left: 0;
 		right: 0;
 		padding: 0 1.5rem;
@@ -68,6 +68,12 @@
 		font-size: 2rem;
 		font-weight: 700;
 		text-decoration: none;
+	}
+
+	&__burger-menu {
+		color: colors.$white;
+		cursor: pointer;
+		display: none;
 	}
 
 	&__menu {
@@ -122,23 +128,25 @@
 		color: colors.$white;
 		text-align: center;
 		font-family: fonts.$kaushan;
-		font-size: 4.8rem;
 		text-transform: capitalize;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
+
+		@extend %clamp-3-5;
 	}
 
 	&__title {
 		color: colors.$white;
 		text-align: center;
 		font-weight: 700;
-		font-size: 9rem;
 		text-transform: uppercase;
 		line-height: 0.9;
+
+		@extend %clamp-6;
 
 		&::after {
 			content: '';
 			display: block;
-			margin: 4rem auto 0;
+			margin: 3rem auto 0;
 			height: 3px;
 			width: 60px;
 			background-color: colors.$white;
@@ -146,18 +154,18 @@
 	}
 
 	&__button {
-		font-size: 1rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		color: colors.$white;
 		outline: none;
 		border: 3px solid colors.$white;
 		padding: 0.7rem 2rem;
-		margin-top: 3.5rem;
+		margin-top: 3rem;
 		background: none;
 		width: max-content;
 		cursor: pointer;
 
+		@extend %clamp-1;
 		@include mixins.transition(all, 0.5s, ease);
 
 		&:hover {
@@ -177,7 +185,6 @@
 
 	&__item {
 		color: colors.$white;
-		font-size: 1.2rem;
 		text-transform: uppercase;
 		border-top: 3px solid colors.$white;
 		padding-top: 1.6rem;
@@ -189,7 +196,14 @@
 
 		&--bold {
 			font-weight: 700;
-			font-size: 1.6rem;
+
+			@extend %clamp-1-6;
+		}
+
+		&--thin {
+			font-weight: 400;
+
+			@extend %clamp-1-2;
 		}
 
 		&--active,
@@ -206,6 +220,47 @@
 			left: 0;
 			top: -3px;
 			background-color: colors.$red;
+		}
+	}
+}
+
+@media all and (max-width: 850px) {
+	.navbar {
+		&__burger-menu {
+			display: block;
+		}
+
+		&__menu {
+			display: none;
+		}
+	}
+}
+
+@media all and (max-width: 650px) {
+	.intro {
+		&__title {
+			&::after {
+				margin: 2rem auto 0;
+			}
+		}
+
+		&__button {
+			padding: 0.5rem 1rem;
+			margin-top: 2.5rem;
+		}
+	}
+
+	.navbar-slider {
+		&__menu {
+			gap: 0.8rem;
+		}
+
+		&__item {
+			padding-top: 1rem;
+
+			&--thin {
+				display: none;
+			}
 		}
 	}
 }
@@ -234,9 +289,10 @@
 
 	&__subtitle {
 		font-family: fonts.$kaushan;
-		font-size: 1.6rem;
 		color: colors.$dark;
 		margin-bottom: 1rem;
+
+		@extend %clamp-1-6;
 
 		&::first-letter {
 			text-transform: uppercase;
@@ -246,8 +302,9 @@
 	&__title {
 		color: colors.$dark;
 		font-weight: 700;
-		font-size: 2rem;
 		text-transform: uppercase;
+
+		@extend %clamp-2;
 
 		&::after {
 			content: '';
@@ -260,9 +317,10 @@
 	}
 
 	&__description {
-		font-size: 1rem;
 		font-family: fonts.$roboto;
 		line-height: 1.6rem;
+
+		@extend %clamp-1;
 	}
 }
 
@@ -313,6 +371,7 @@
 
 	&__image {
 		display: block;
+		max-width: 100%;
 
 		@include mixins.transition(all, 0.3s, ease);
 		@include mixins.border-radius(7px);
@@ -331,6 +390,26 @@
 	}
 }
 
+@media all and (max-width: 700px) {
+	.top-text {
+		margin: 3rem auto;
+
+		&--big-space {
+			padding-top: 2rem;
+		}
+
+		&--large-space {
+			padding-top: 2rem;
+		}
+	}
+
+	.about {
+		&__gallery-about {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
 // ---------------------------------------------
 // -----------------STATISTICS------------------
 // ---------------------------------------------
@@ -338,8 +417,9 @@
 	background-color: colors.$green;
 
 	&__item {
+		flex: 1;
 		text-align: center;
-		padding: 6rem 0;
+		padding: 6rem 2rem;
 		border-left: 1px solid colors.$white-alpha;
 	}
 
@@ -349,20 +429,41 @@
 
 	&__text {
 		color: colors.$white;
-		font-size: 0.9rem;
 		text-transform: uppercase;
+
+		@extend %clamp-0-9;
 
 		&--big {
 			font-weight: 700;
-			font-size: 4.8rem;
 			margin-bottom: 1rem;
+
+			@extend %clamp-4-8;
 		}
 	}
 }
 
-.statistics-grid {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+.statistics-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media all and (max-width: 900px) {
+	.statistics {
+		&__item:nth-child(n) {
+			flex: none;
+			border: none;
+			padding: 3rem;
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+	.statistics {
+		&__item:nth-child(n) {
+			padding: 2rem;
+		}
+	}
 }
 
 // ---------------------------------------------
@@ -382,25 +483,58 @@
 	}
 
 	&__title {
-		font-size: 0.9rem;
 		color: colors.$dark;
 		text-transform: uppercase;
+
+		@extend %clamp-0-9;
 	}
 
 	&__description {
 		font-family: fonts.$roboto;
-		font-size: 1rem;
 		color: colors.$silver;
 		margin-top: 0.6rem;
+
+		@extend %clamp-1;
 	}
 }
 
-.services-grid {
+.services-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 	row-gap: 1px;
 	background-color: colors.$silver-light;
 	margin-bottom: 5rem;
+}
+
+@media all and (max-width: 780px) {
+	.services {
+		&__item {
+			padding: 2rem 1rem;
+		}
+	}
+}
+
+@media all and (max-width: 700px) {
+	.services-container {
+		margin-bottom: 0;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.services-container {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+
+	.services {
+		&__item {
+			flex-direction: column;
+		}
+
+		&__title {
+			margin-top: 1rem;
+		}
+	}
 }
 
 // ---------------------------------------------
@@ -415,6 +549,7 @@
 
 	&__images {
 		margin: 2rem auto 0;
+		padding: 0 2rem;
 		max-width: 600px;
 		position: relative;
 	}
@@ -422,16 +557,38 @@
 	&__ipad {
 		display: block;
 		max-width: 100%;
+		margin: 0 auto;
 	}
 
 	&__iphone {
 		position: absolute;
 		display: block;
-		max-width: 200px;
+		width: 200px;
 		bottom: -5%;
 		right: 0;
 
 		@include mixins.translate(0, 5%);
+	}
+}
+
+@media all and (max-width: 750px) {
+	.unique-design {
+		&__images {
+			max-width: 400px;
+		}
+
+		&__iphone {
+			max-width: 150px;
+			right: -20px;
+		}
+	}
+}
+
+@media all and (max-width: 500px) {
+	.unique-design {
+		&__iphone {
+			display: none;
+		}
 	}
 }
 
@@ -440,15 +597,16 @@
 // ---------------------------------------------
 .we-do {
 	&__image {
+		display: block;
 		max-width: 100%;
 
 		@include mixins.border-radius(7px);
 	}
 }
 
-.we-do-grid {
+.we-do-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 	margin-bottom: 7.3rem;
 }
@@ -498,21 +656,22 @@
 	}
 
 	&__title {
-		font-size: 1rem;
 		text-transform: uppercase;
 		color: colors.$dark;
 		margin-left: 2.5rem;
+
+		@extend %clamp-1;
 	}
 
 	&__content {
-		font-size: 1rem;
 		font-family: fonts.$roboto;
 		font-weight: 300;
 		font-style: italic;
 		padding: 1.3rem;
 		border: 1px solid colors.$silver-light;
 		border-top: none;
-		display: none;
+
+		@extend %clamp-1;
 
 		&--show {
 			display: block;
@@ -520,6 +679,49 @@
 
 		&--hide {
 			display: none;
+		}
+	}
+}
+
+@media all and (max-width: 950px) {
+	.we-do-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.we-do-container {
+		margin-bottom: 3rem;
+	}
+}
+
+@media all and (max-width: 530px) {
+	.accordion {
+		&__header {
+			padding: 0.7rem;
+		}
+
+		&__content {
+			padding: 1rem;
+		}
+	}
+}
+
+@media all and (max-width: 350px) {
+	.accordion {
+		&__icon {
+			display: none;
+
+			&-up,
+			&-down {
+				font-size: 0.7rem;
+			}
+		}
+
+		&__title {
+			margin-left: 0;
 		}
 	}
 }
@@ -537,7 +739,7 @@
 	}
 
 	&__icon {
-		max-width: 100%;
+		display: block;
 
 		&--message {
 			border: 3px solid colors.$green;
@@ -550,20 +752,22 @@
 	}
 
 	&__text {
-		font-size: 1.6rem;
 		font-style: italic;
 		font-family: fonts.$roboto;
 		font-weight: 300;
 		margin-bottom: 1.5rem;
+
+		@extend %clamp-1-6;
 	}
 
 	&__name {
-		font-size: 1.6rem;
 		font-family: fonts.$kaushan;
 		text-transform: capitalize;
 		color: colors.$dark;
 		padding-left: 4.7rem;
 		position: relative;
+
+		@extend %clamp-1-6;
 
 		&::before {
 			content: '';
@@ -592,13 +796,64 @@
 	}
 }
 
-.reviews-grid {
+.reviews-container {
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	gap: 4rem;
 	align-items: center;
 	padding: 4.6rem 6.6rem;
+}
+
+@media all and (max-width: 700px) {
+	.reviews-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.reviews {
+		&__icon {
+			max-width: 100%;
+		}
+	}
+}
+
+@media all and (max-width: 450px) {
+	.reviews {
+		&__icon {
+			display: none;
+		}
+
+		&__name {
+			padding-left: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&__slider-left {
+			left: 0;
+		}
+
+		&__slider-right {
+			right: 0;
+		}
+	}
+
+	.reviews-container {
+		padding: 3rem 2rem;
+	}
+}
+
+@media all and (max-width: 350px) {
+	.reviews {
+		&__slider-left,
+		&__slider-right {
+			font-size: 1rem;
+		}
+	}
 }
 
 // ---------------------------------------------
@@ -614,10 +869,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 3rem;
+	gap: 2rem;
 
 	&__item {
-		max-width: 380px;
+		max-width: 100%;
+		display: block;
 
 		&-wrapper {
 			background-color: colors.$green;
@@ -651,11 +907,13 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		max-width: 100%;
 
 		@include mixins.translate(-50%, -50%);
 	}
 
 	&__image {
+		max-width: 100%;
 		display: block;
 
 		@include mixins.border-radius(7px);
@@ -668,18 +926,20 @@
 	}
 
 	&__name {
-		font-size: 0.9rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		color: colors.$dark;
+
+		@extend %clamp-0-9;
 	}
 
 	&__job-title {
 		font-family: fonts.$roboto;
 		font-style: italic;
-		font-size: 1rem;
 		text-transform: capitalize;
 		padding-top: 0.6rem;
+
+		@extend %clamp-1;
 	}
 }
 
@@ -699,6 +959,10 @@
 
 		@include mixins.transition(all, 0.2s, ease);
 
+		&:last-child {
+			border-right: none;
+		}
+
 		&:hover {
 			background-color: colors.$red;
 		}
@@ -708,12 +972,33 @@
 		color: colors.$white;
 	}
 
-	&__item:last-child {
-		border-right: none;
-	}
-
 	&__icon {
 		color: colors.$red;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.team {
+		&__gallery-team {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+@media all and (max-width: 350px) {
+	.social {
+		flex-direction: column;
+
+		&__item {
+			border-bottom: 1px solid colors.$red;
+			border-right: none;
+			padding: 0.5rem;
+			width: auto;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
 	}
 }
 
@@ -729,6 +1014,20 @@
 		justify-content: center;
 		gap: 4rem;
 		padding: 4rem 0;
+	}
+
+	&__image {
+		max-width: 100%;
+		display: block;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.logos {
+		&__container {
+			gap: 2rem;
+			padding: 2rem 0;
+		}
 	}
 }
 
@@ -763,6 +1062,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
+		max-width: 100%;
 
 		@include mixins.transition(all, 0.3s, ease);
 	}
@@ -781,15 +1081,47 @@
 
 	&__title {
 		padding-top: 1rem;
-		font-size: 0.9rem;
 		text-transform: uppercase;
+
+		@extend %clamp-0-9;
 	}
 
 	&__subtitle {
 		padding-top: 1rem;
-		font-size: 1rem;
 		font-family: fonts.$roboto;
 		font-style: italic;
+
+		@extend %clamp-1;
+	}
+}
+
+@media all and (max-width: 1000px) {
+	.gallery-work {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+
+		&__item:nth-child(2) {
+			grid-row: span 2;
+		}
+	}
+}
+
+@media all and (max-width: 700px) {
+	.gallery-work {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+
+		&__item:nth-child(7) {
+			grid-row: span 2;
+		}
+	}
+}
+
+@media all and (max-width: 450px) {
+	.gallery-work {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 
@@ -825,10 +1157,11 @@
 	}
 
 	&__title {
-		font-size: 1.6rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		padding-top: 1.2rem;
+
+		@extend %clamp-1-6;
 
 		&::after {
 			content: '';
@@ -847,19 +1180,21 @@
 .footer {
 	&__title {
 		text-align: center;
-		font-size: 0.9rem;
 		color: colors.$dark;
-		padding: 1.3rem 0;
+		padding: 1.3rem 1rem;
 
-		&--red {
-			text-decoration: none;
-			color: colors.$red;
+		@extend %clamp-0-9;
+	}
 
-			@include mixins.transition(all, 0.3s, ease);
+	&__link {
+		text-decoration: none;
+		color: colors.$red;
 
-			&:hover {
-				color: colors.$dark;
-			}
+		@extend %clamp-0-9;
+		@include mixins.transition(all, 0.3s, ease);
+
+		&:hover {
+			color: colors.$dark;
 		}
 	}
 }
@@ -888,5 +1223,15 @@
 
 	&__icon {
 		color: colors.$white;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.button-top {
+		padding: 0 auto;
+
+		&__icon {
+			font-size: 1.3rem;
+		}
 	}
 }

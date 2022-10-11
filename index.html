@@ -24,6 +24,11 @@
 			<div class="wrapper">
 				<nav class="header__navbar navbar">
 					<a class="navbar__logo" href="#">MoGo</a>
+					<div class="navbar__burger-menu">
+						<i
+							class="navbar__burger-menu-icon fa-solid fa-bars fa-xl"
+						></i>
+					</div>
 					<ul class="navbar__menu">
 						<li class="navbar__list">
 							<a
@@ -72,7 +77,9 @@
 								<span class="navbar-slider__item--bold"
 									>01</span
 								>
-								intro
+								<span class="navbar-slider__item--thin"
+									>intro</span
+								>
 							</p>
 						</li>
 						<li class="navbar-slider__list">
@@ -80,7 +87,9 @@
 								<span class="navbar-slider__item--bold"
 									>02</span
 								>
-								work
+								<span class="navbar-slider__item--thin"
+									>work</span
+								>
 							</p>
 						</li>
 						<li class="navbar-slider__list">
@@ -88,7 +97,9 @@
 								<span class="navbar-slider__item--bold"
 									>03</span
 								>
-								about
+								<span class="navbar-slider__item--thin"
+									>about</span
+								>
 							</p>
 						</li>
 						<li class="navbar-slider__list">
@@ -96,7 +107,9 @@
 								<span class="navbar-slider__item--bold"
 									>04</span
 								>
-								contacts
+								<span class="navbar-slider__item--thin"
+									>contacts</span
+								>
 							</p>
 						</li>
 					</ul>
@@ -174,7 +187,7 @@
 		<!-- ------------------STATISTICS------------------ -->
 		<section class="statistics">
 			<div class="wrapper">
-				<div class="statistics-grid">
+				<div class="statistics-container">
 					<div class="statistics__item">
 						<h1
 							class="statistics__text statistics__text--big"
@@ -230,7 +243,7 @@
 					<h2 class="top-text__subtitle">we work with</h2>
 					<h1 class="top-text__title">amazing services</h1>
 				</div>
-				<div class="services-grid">
+				<div class="services-container">
 					<div class="services__item">
 						<div class="services__icon">
 							<i class="fa-regular fa-clock fa-xl"></i>
@@ -329,18 +342,19 @@
 		</section>
 		<!-- ------------------WHAT WE DO------------------ -->
 		<section class="we-do">
-			<div class="we-do__top-text top-text top-text--large-space">
-				<h2 class="top-text__subtitle">service</h2>
-				<h1 class="top-text__title">what we do</h1>
-				<p class="top-text__description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
-			</div>
 			<div class="wrapper">
-				<div class="we-do-grid">
+				<div class="we-do__top-text top-text top-text--large-space">
+					<h2 class="top-text__subtitle">service</h2>
+					<h1 class="top-text__title">what we do</h1>
+					<p class="top-text__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea
+						commodo consequat.
+					</p>
+				</div>
+				<div class="we-do-container">
 					<img
 						src="img/what-we-do.png"
 						class="we-do__image"
@@ -448,7 +462,7 @@
 		<!-- ------------------REVIEWS GRAY------------------ -->
 		<section class="reviews reviews--gray">
 			<div class="wrapper">
-				<div class="reviews-grid">
+				<div class="reviews-container">
 					<img
 						src="img/reviews-comments.png"
 						class="reviews__icon reviews__icon--message"
@@ -478,131 +492,138 @@
 		</section>
 		<!-- ------------------MEET OUR TEAM------------------ -->
 		<section class="team">
-			<div class="team__top-text top-text">
-				<h2 class="top-text__subtitle">who we are</h2>
-				<h1 class="top-text__title">meet our team</h1>
-				<p class="top-text__description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
-			</div>
-			<div class="team__gallery-team gallery-team">
-				<div class="gallery-team__item">
-					<div class="gallery-team__item-wrapper">
-						<figure class="gallery-team__image-container">
-							<img
-								src="img/team-1.png"
-								class="gallery-team__image"
-								alt="Graphic Design"
-								title="Graphic Design"
-							/>
-							<figcaption class="gallery-team__social social">
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-facebook-f fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-twitter fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-pinterest-p fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-instagram fa-xl"
-									></i>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
-					<div class="gallery-team__description">
-						<p class="gallery-team__name">matthew dix</p>
-						<p class="gallery-team__job-title">graphic design</p>
-					</div>
+			<div class="wrapper">
+				<div class="team__top-text top-text">
+					<h2 class="top-text__subtitle">who we are</h2>
+					<h1 class="top-text__title">meet our team</h1>
+					<p class="top-text__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea
+						commodo consequat.
+					</p>
 				</div>
-				<div class="gallery-team__item">
-					<div class="gallery-team__item-wrapper">
-						<figure class="gallery-team__image-container">
-							<img
-								src="img/team-2.png"
-								class="gallery-team__image"
-								alt="Branding/UX Design"
-								title="Branding/UX Design"
-							/>
-							<figcaption class="gallery-team__social social">
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-facebook-f fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-twitter fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-pinterest-p fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-instagram fa-xl"
-									></i>
-								</div>
-							</figcaption>
-						</figure>
+				<div class="team__gallery-team gallery-team">
+					<div class="gallery-team__item">
+						<div class="gallery-team__item-wrapper">
+							<figure class="gallery-team__image-container">
+								<img
+									src="img/team-1.png"
+									class="gallery-team__image"
+									alt="Graphic Design"
+									title="Graphic Design"
+								/>
+								<figcaption class="gallery-team__social social">
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-facebook-f fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-twitter fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-pinterest-p fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-instagram fa-xl"
+										></i>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="gallery-team__description">
+							<p class="gallery-team__name">matthew dix</p>
+							<p class="gallery-team__job-title">
+								graphic design
+							</p>
+						</div>
 					</div>
-					<div class="gallery-team__description">
-						<p class="gallery-team__name">christopher campbell</p>
-						<p class="gallery-team__job-title">
-							branding/UX design
-						</p>
+					<div class="gallery-team__item">
+						<div class="gallery-team__item-wrapper">
+							<figure class="gallery-team__image-container">
+								<img
+									src="img/team-2.png"
+									class="gallery-team__image"
+									alt="Branding/UX Design"
+									title="Branding/UX Design"
+								/>
+								<figcaption class="gallery-team__social social">
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-facebook-f fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-twitter fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-pinterest-p fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-instagram fa-xl"
+										></i>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="gallery-team__description">
+							<p class="gallery-team__name">
+								christopher campbell
+							</p>
+							<p class="gallery-team__job-title">
+								branding/UX design
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="gallery-team__item">
-					<div class="gallery-team__item-wrapper">
-						<figure class="gallery-team__image-container">
-							<img
-								src="img/team-3.png"
-								class="gallery-team__image"
-								alt="Developer"
-								title="Developer"
-							/>
-							<figcaption class="gallery-team__social social">
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-facebook-f fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-twitter fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-pinterest-p fa-xl"
-									></i>
-								</div>
-								<div class="social__item">
-									<i
-										class="social__icon fa-brands fa-instagram fa-xl"
-									></i>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
-					<div class="gallery-team__description">
-						<p class="gallery-team__name">michael fertig</p>
-						<p class="gallery-team__job-title">developer</p>
+					<div class="gallery-team__item">
+						<div class="gallery-team__item-wrapper">
+							<figure class="gallery-team__image-container">
+								<img
+									src="img/team-3.png"
+									class="gallery-team__image"
+									alt="Developer"
+									title="Developer"
+								/>
+								<figcaption class="gallery-team__social social">
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-facebook-f fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-twitter fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-pinterest-p fa-xl"
+										></i>
+									</div>
+									<div class="social__item">
+										<i
+											class="social__icon fa-brands fa-instagram fa-xl"
+										></i>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="gallery-team__description">
+							<p class="gallery-team__name">michael fertig</p>
+							<p class="gallery-team__job-title">developer</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -652,15 +673,18 @@
 		</section>
 		<!-- ------------------SOME OF OUR WORK------------------ -->
 		<section class="work">
-			<div class="work__top-text top-text">
-				<h2 class="top-text__subtitle">what we do</h2>
-				<h1 class="top-text__title">some of our work</h1>
-				<p class="top-text__description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
+			<div class="wrapper">
+				<div class="work__top-text top-text">
+					<h2 class="top-text__subtitle">what we do</h2>
+					<h1 class="top-text__title">some of our work</h1>
+					<p class="top-text__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea
+						commodo consequat.
+					</p>
+				</div>
 			</div>
 			<div class="work__gallery-work gallery-work">
 				<figure class="gallery-work__item">
@@ -787,7 +811,7 @@
 		<!-- ------------------REVIEWS IMAGE------------------ -->
 		<section class="reviews reviews--white">
 			<div class="wrapper">
-				<div class="reviews-grid">
+				<div class="reviews-container">
 					<img
 						src="img/reviews-round-image.png"
 						class="reviews__icon reviews__icon--human"
@@ -826,7 +850,7 @@
 		<footer class="footer">
 			<p class="footer__title">
 				&#64; 2016 MoGo free PSD template by
-				<a class="footer__title footer__title--red" href="#">Laaqiq</a>
+				<a class="footer__link" href="#">Laaqiq</a>
 			</p>
 		</footer>
 	</body>

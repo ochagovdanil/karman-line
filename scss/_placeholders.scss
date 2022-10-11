@@ -3,9 +3,10 @@
 
 %header-navbar-item {
 	color: colors.$white;
-	font-size: 0.9rem;
 	margin: 0 0 0 3rem;
 	cursor: pointer;
+
+	@extend %clamp-0-9;
 
 	&:hover {
 		color: colors.$yellow;
@@ -29,4 +30,36 @@
 	&:hover {
 		color: colors.$red;
 	}
+}
+
+%clamp-0-9 {
+	font-size: clamp(0.7rem, 2vw, 0.9rem);
+}
+
+%clamp-1 {
+	font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+%clamp-1-2 {
+	font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+%clamp-1-6 {
+	font-size: clamp(1.3rem, 3vw, 1.6rem);
+}
+
+%clamp-2 {
+	font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+%clamp-3-5 {
+	font-size: clamp(1.8rem, 5vw, 3.5rem);
+}
+
+%clamp-4-8 {
+	font-size: clamp(3rem, 4vw, 4.8rem);
+}
+
+%clamp-6 {
+	font-size: clamp(2.8rem, 10vw, 6rem);
 }
