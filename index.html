@@ -11,8 +11,8 @@
 			src="https://kit.fontawesome.com/1474823e3d.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/jquery-3.6.1.min.js"></script>
-		<script src="js/animation.js" defer></script>
+		<script src="js/jquery-3.6.1.min.js" defer></script>
+		<script src="js/index.js" defer></script>
 	</head>
 	<body>
 		<!-- -------------TO THE TOP BUTTON--------------- -->
@@ -33,21 +33,33 @@
 						<li class="navbar__list">
 							<a
 								href="#"
-								class="navbar__item navbar__item--active"
+								class="navbar__item"
+								data-scroll=".about"
 								>about</a
 							>
 						</li>
 						<li class="navbar__list">
-							<a href="#" class="navbar__item">service</a>
+							<a
+								href="#"
+								class="navbar__item"
+								data-scroll=".services"
+								>service</a
+							>
 						</li>
 						<li class="navbar__list">
-							<a href="#" class="navbar__item">work</a>
+							<a href="#" class="navbar__item" data-scroll=".team"
+								>blog</a
+							>
 						</li>
 						<li class="navbar__list">
-							<a href="#" class="navbar__item">blog</a>
+							<a href="#" class="navbar__item" data-scroll=".work"
+								>work</a
+							>
 						</li>
 						<li class="navbar__list">
-							<a href="#" class="navbar__item">contact</a>
+							<a href="#" class="navbar__item" data-scroll=".map"
+								>contact</a
+							>
 						</li>
 						<li class="navbar__list">
 							<i
@@ -362,27 +374,16 @@
 						title="What We Do"
 					/>
 					<div class="we-do__accordion accordion">
-						<div class="accordion__item">
+						<div class="accordion__item" data-collapse="#we-do-1">
 							<div class="accordion__header">
 								<div class="accordion__icon">
 									<i class="fa-regular fa-image fa-xl"></i>
 								</div>
 								<p class="accordion__title">photography</p>
-								<div
-									class="accordion__icon-up accordion__icon-up--active"
-								>
-									<i class="fa-solid fa-chevron-up fa-xl"></i>
-								</div>
-								<div
-									class="accordion__icon-down accordion__icon-up--inactive"
-								>
-									<i
-										class="fa-solid fa-chevron-down fa-xl"
-									></i>
-								</div>
 							</div>
 							<p
 								class="accordion__content accordion__content--show"
+								id="we-do-1"
 							>
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor
@@ -393,27 +394,16 @@
 								reprehenderit in voluptate velit esse
 							</p>
 						</div>
-						<div class="accordion__item">
+						<div class="accordion__item" data-collapse="#we-do-2">
 							<div class="accordion__header">
 								<div class="accordion__icon">
 									<i class="fa-solid fa-sliders fa-xl"></i>
 								</div>
 								<p class="accordion__title">creativity</p>
-								<div
-									class="accordion__icon-up accordion__icon-up--inactive"
-								>
-									<i class="fa-solid fa-chevron-up fa-xl"></i>
-								</div>
-								<div
-									class="accordion__icon-down accordion__icon-down--active"
-								>
-									<i
-										class="fa-solid fa-chevron-down fa-xl"
-									></i>
-								</div>
 							</div>
 							<p
 								class="accordion__content accordion__content--hide"
+								id="we-do-2"
 							>
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor
@@ -424,27 +414,16 @@
 								reprehenderit in voluptate velit esse
 							</p>
 						</div>
-						<div class="accordion__item">
+						<div class="accordion__item" data-collapse="#we-do-3">
 							<div class="accordion__header">
 								<div class="accordion__icon">
 									<i class="fa-regular fa-circle fa-xl"></i>
 								</div>
 								<p class="accordion__title">web design</p>
-								<div
-									class="accordion__icon-up accordion__icon-up--inactive"
-								>
-									<i class="fa-solid fa-chevron-up fa-xl"></i>
-								</div>
-								<div
-									class="accordion__icon-down accordion__icon-down--active"
-								>
-									<i
-										class="fa-solid fa-chevron-down fa-xl"
-									></i>
-								</div>
 							</div>
 							<p
 								class="accordion__content accordion__content--hide"
+								id="we-do-3"
 							>
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor
@@ -462,25 +441,79 @@
 		<!-- ------------------REVIEWS GRAY------------------ -->
 		<section class="reviews reviews--gray">
 			<div class="wrapper">
-				<div class="reviews-container">
-					<img
-						src="img/reviews-comments.png"
-						class="reviews__icon reviews__icon--message"
-						alt="Comments"
-						title="Comments"
-					/>
-					<div class="reviews__content">
-						<p class="reviews__text">
-							<q class="reviews__quotes"
-								>Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud
-								exercitation.</q
-							>
-						</p>
-						<p class="reviews__name">jon doe</p>
+				<div class="reviews__slider slider">
+					<div class="slider__item-wrapper">
+						<div class="slider__item">
+							<img
+								src="img/reviews-comments.png"
+								class="slider__icon slider__icon--message"
+								alt="Comments"
+								title="Comments"
+							/>
+							<div class="slider__content">
+								<p class="slider__text">
+									<q class="slider__quotes"
+										>Lorem, ipsum dolor sit amet consectetur
+										adipisicing elit. Aut fuga sint amet
+										nulla, placeat accusantium quasi
+										accusamus laborum dolores suscipit vel
+										corporis incidunt ex quis! Ipsa ratione
+										reprehenderit ab veritatis, porro
+										perferendis excepturi blanditiis,
+										temporibus id amet, deleniti molestiae
+										soluta..</q
+									>
+								</p>
+								<p class="slider__name">danil ochagov</p>
+							</div>
+						</div>
 					</div>
+					<!-- <div class="slider__item-wrapper">
+						<div class="slider__item">
+							<img
+								src="img/reviews-comments.png"
+								class="slider__icon slider__icon--message"
+								alt="Comments"
+								title="Comments"
+							/>
+							<div class="slider__content">
+								<p class="slider__text">
+									<q class="slider__quotes"
+										>Lorem ipsum dolor sit amet, consectetur
+										adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis
+										nostrud exercitation.</q
+									>
+								</p>
+								<p class="slider__name">jon doe</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider__item-wrapper">
+						<div class="slider__item">
+							<img
+								src="img/reviews-comments.png"
+								class="slider__icon slider__icon--message"
+								alt="Comments"
+								title="Comments"
+							/>
+							<div class="slider__content">
+								<p class="slider__text">
+									<q class="slider__quotes"
+										>Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Harum repudiandae
+										mollitia porro incidunt aperiam esse
+										illo voluptatibus, praesentium
+										asperiores, ratione illum consequatur
+										facilis rem est vitae veritatis!
+										Adipisci, minus officiis?</q
+									>
+								</p>
+								<p class="slider__name">alan walker</p>
+							</div>
+						</div>
+					</div> -->
 					<i
 						class="reviews__slider-left fa-solid fa-chevron-left fa-xl"
 					></i>
@@ -811,25 +844,75 @@
 		<!-- ------------------REVIEWS IMAGE------------------ -->
 		<section class="reviews reviews--white">
 			<div class="wrapper">
-				<div class="reviews-container">
-					<img
-						src="img/reviews-round-image.png"
-						class="reviews__icon reviews__icon--human"
-						alt="Human"
-						title="Human"
-					/>
-					<div class="reviews__content">
-						<p class="reviews__text">
-							<q class="reviews__quotes"
-								>Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud
-								exercitation.</q
-							>
-						</p>
-						<p class="reviews__name">joshua earle</p>
+				<div class="reviews__slider slider">
+					<div class="slider__item-wrapper">
+						<div class="slider__item">
+							<img
+								src="img/reviews-round-image-1.png"
+								class="slider__icon slider__icon--human"
+								alt="Human"
+								title="Human"
+							/>
+							<div class="slider__content">
+								<p class="slider__text">
+									<q class="slider__quotes"
+										>Lorem ipsum dolor sit amet consectetur,
+										adipisicing elit. Modi rerum voluptatem
+										totam tempora recusandae necessitatibus,
+										id quisquam nostrum esse neque. Lorem
+										ipsum dolor sit amet consectetur
+										adipisicing elit. Aliquid
+										exercitationem, libero illo harum sit
+										deleniti.</q
+									>
+								</p>
+								<p class="slider__name">alex walker</p>
+							</div>
+						</div>
 					</div>
+					<!-- <div class="slider__item-wrapper">
+						<div class="slider__item">
+							<img
+								src="img/reviews-round-image-2.png"
+								class="slider__icon slider__icon--human"
+								alt="Human"
+								title="Human"
+							/>
+							<div class="slider__content">
+								<p class="slider__text">
+									<q class="slider__quotes"
+										>Lorem ipsum dolor sit amet, consectetur
+										adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis
+										nostrud exercitation.</q
+									>
+								</p>
+								<p class="slider__name">joshua earle</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider__item-wrapper">
+						<div class="slider__item">
+							<img
+								src="img/reviews-round-image-3.png"
+								class="slider__icon slider__icon--human"
+								alt="Human"
+								title="Human"
+							/>
+							<div class="slider__content">
+								<p class="slider__text">
+									<q class="slider__quotes"
+										>Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Nobis libero pariatur
+										cum tempora ipsam. Quae saepe eveniet
+										repudiandae maiores dolores!</q
+									>
+								</p>
+								<p class="slider__name">john doe</p>
+							</div>
+						</div>
+					</div> -->
 					<i
 						class="reviews__slider-left fa-solid fa-chevron-left fa-xl"
 					></i>
