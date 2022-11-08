@@ -80,19 +80,11 @@
 		}
 
 		&--active .header__bar:nth-child(1) {
-			transform: translateY(8px) rotate(45deg);
-			-webkit-transform: translateY(8px) rotate(45deg);
-			-moz-transform: translateY(8px) rotate(45deg);
-			-ms-transform: translateY(8px) rotate(45deg);
-			-o-transform: translateY(8px) rotate(45deg);
+			@include mixins.translateYAndRotate(8px, 45deg);
 		}
 
 		&--active .header__bar:nth-child(3) {
-			transform: translateY(-8px) rotate(-45deg);
-			-webkit-transform: translateY(-8px) rotate(-45deg);
-			-moz-transform: translateY(-8px) rotate(-45deg);
-			-ms-transform: translateY(-8px) rotate(-45deg);
-			-o-transform: translateY(-8px) rotate(-45deg);
+			@include mixins.translateYAndRotate(-8px, -45deg);
 		}
 	}
 

@@ -14,6 +14,14 @@
 	-o-transform: translate3d($x, $y, $z);
 }
 
+@mixin translateYAndRotate($prop1, $prop2) {
+	transform: translateY($prop1) rotate($prop2);
+	-webkit-transform: translateY($prop1) rotate($prop2);
+	-moz-transform: translateY($prop1) rotate($prop2);
+	-ms-transform: translateY($prop1) rotate($prop2);
+	-o-transform: translateY($prop1) rotate($prop2);
+}
+
 @mixin border-radius($value) {
 	border-radius: $value;
 	-webkit-border-radius: $value;
