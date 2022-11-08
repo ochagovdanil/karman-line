@@ -46,7 +46,8 @@ $(document).ready(function () {
 
 	$('.button-top').click(function () {
 		$('a.navbar__item').removeClass('navbar__item--active')
-		$('.navbar__menu').removeClass('navbar__menu--active')
+		$('.navbar').removeClass('navbar--active')
+		$('.header__hamburger').removeClass('header__hamburger--active')
 
 		$('html, body').animate({ scrollTop: 0 }, 100)
 		return false
@@ -56,7 +57,7 @@ $(document).ready(function () {
 // ------------------------FIXED NAVIGATION BAR MENU--------------------------
 $(function () {
 	var headerHeight = $('.header').innerHeight(),
-		navbar = $('.header__navbar'),
+		navbar = $('.header__menu'),
 		scrollOffSet = $(window).scrollTop()
 
 	checkScroll(scrollOffSet)
@@ -69,9 +70,8 @@ $(function () {
 	})
 
 	function checkScroll(scrollOffSet) {
-		if (scrollOffSet > headerHeight)
-			navbar.addClass('header__navbar--fixed')
-		else navbar.removeClass('header__navbar--fixed')
+		if (scrollOffSet > headerHeight) navbar.addClass('header__menu--fixed')
+		else navbar.removeClass('header__menu--fixed')
 	}
 })
 
@@ -83,8 +83,9 @@ $(function () {
 		var block = $(this).data('scroll'),
 			blockOffSet = $(block).offset().top
 
+		$('.navbar').removeClass('navbar--active')
+		$('.header__hamburger').removeClass('header__hamburger--active')
 		$('a.navbar__item').removeClass('navbar__item--active')
-		$('.navbar__menu').removeClass('navbar__menu--active')
 		$(this).addClass('navbar__item--active')
 
 		$('html, body').animate({ scrollTop: blockOffSet - 100 }, 100)
@@ -92,12 +93,12 @@ $(function () {
 })
 
 // ----------------------------BURGER MENU TOGGLE-----------------------------------
-$(function () {
-	$('.navbar__burger-menu').on('click', function (event) {
-		event.preventDefault()
+const hamburger = document.querySelector('.header__hamburger')
+const navMenu = document.querySelector('.navbar')
 
-		$('.navbar__menu').toggleClass('navbar__menu--active')
-	})
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('header__hamburger--active')
+	navMenu.classList.toggle('navbar--active')
 })
 
 // --------------------------------ACCORDION-------------------------------------
