@@ -1,18 +1,18 @@
  <!-- --------STATS-------- -->
  <a href="https://github.com/ochagovdanil/mogo/graphs/contributors">
-	<img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/ochagovdanil/mogo.svg?style=for-the-badge" />
+	<img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/ochagovdanil/mogo.svg" />
 </a>
 <a href="https://github.com/ochagovdanil/mogo/network/members">
-	<img alt="Issues" src="https://img.shields.io/github/forks/ochagovdanil/mogo.svg?style=for-the-badge" />
+	<img alt="Issues" src="https://img.shields.io/github/forks/ochagovdanil/mogo.svg" />
 </a>
 <a href="https://github.com/ochagovdanil/mogo/stargazers">
-	<img alt="Issues" src="https://img.shields.io/github/stars/ochagovdanil/mogo.svg?style=for-the-badge" />
+	<img alt="Issues" src="https://img.shields.io/github/stars/ochagovdanil/mogo.svg" />
 </a>
 <a href="https://github.com/ochagovdanil/mogo/issues">
-	<img alt="Issues" src="https://img.shields.io/github/issues/ochagovdanil/mogo.svg?style=for-the-badge" />
+	<img alt="Issues" src="https://img.shields.io/github/issues/ochagovdanil/mogo.svg" />
 </a>
-<a href="https://github.com/ochagovdanil/mogo/blob/master/LICENSE.txt">
-	<img alt="Issues" src="https://img.shields.io/github/license/ochagovdanil/mogo.svg?style=for-the-badge" />
+<a href="https://opensource.org/licenses/MIT">
+	<img alt="Issues" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
 </a>
 
 <!-- --------LOGO-------- -->
@@ -74,7 +74,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- --------CONTACT-------- -->
 
