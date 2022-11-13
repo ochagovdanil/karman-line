@@ -19,7 +19,7 @@
 <br />
 <div align="center">
 	<img src="favicon.svg" alt="Logo" />
-	<p style="font-size: 25px;font-weight:bold;">Mogo - Creative Template</p>
+	<p><strong>Mogo - Creative Template</strong></p>
 	<a href="https://ochagovdanil.github.io/mogo/" target="_blank">Visit the page</a>
 </div>
 
