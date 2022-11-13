@@ -16,6 +16,7 @@
 </a>
 
 <!-- --------LOGO-------- -->
+<br />
 <div align="center">
 	<img src="favicon.svg" alt="Logo" />
 	<h2>Mogo - Creative Template</h2>
@@ -34,8 +35,6 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-
-<hr />
 
 <!-- --------ABOUT THE PROJECT-------- -->
 
