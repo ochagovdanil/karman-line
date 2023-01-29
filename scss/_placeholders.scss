@@ -1,21 +1,20 @@
-@use 'colors';
-@use 'mixins';
+@use 'helper';
 
 %header-navbar-item {
-	color: colors.$white;
+	color: helper.$white;
 	margin: 0 0 0 3rem;
 	cursor: pointer;
 
 	@extend %clamp-0-9;
 
 	&:hover {
-		color: colors.$yellow;
+		color: helper.$yellow;
 	}
 
 	&,
 	&::before,
 	&::after {
-		@include mixins.transition(all, 0.3s, ease);
+		@include helper.transition(all, 0.3s, ease);
 	}
 }
 
@@ -24,11 +23,11 @@
 	top: 50%;
 	cursor: pointer;
 
-	@include mixins.translate(0, -50%);
-	@include mixins.transition(all, 0.3s, ease);
+	@include helper.translate(0, -50%);
+	@include helper.transition(all, 0.3s, ease);
 
 	&:hover {
-		color: colors.$red;
+		color: helper.$red;
 	}
 }
 
