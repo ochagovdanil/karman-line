@@ -19,7 +19,7 @@
 	scroll-behavior: smooth;
 	font-family: fonts.$montserrat;
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 0.9375rem;
 	color: colors.$silver;
 	--swiper-theme-color: colors.$dark;
 	--swiper-navigation-color: colors.$dark;
@@ -27,7 +27,7 @@
 
 .wrapper {
 	position: relative;
-	max-width: 1250px;
+	max-width: 83rem;
 	margin: auto;
 	padding: 0 1.5rem;
 }
@@ -62,7 +62,7 @@
 			right: 0;
 			padding: 1rem 1.5rem;
 			background-color: colors.$red;
-			box-shadow: 0 0 10px colors.$silver;
+			box-shadow: 0 0 0.625rem colors.$silver;
 		}
 	}
 
@@ -82,20 +82,20 @@
 		}
 
 		&--active .header__bar:nth-child(1) {
-			@include mixins.translateYAndRotate(8px, 45deg);
+			@include mixins.translateYAndRotate(0.5rem, 45deg);
 		}
 
 		&--active .header__bar:nth-child(3) {
-			@include mixins.translateYAndRotate(-8px, -45deg);
+			@include mixins.translateYAndRotate(-0.5rem, -45deg);
 		}
 	}
 
 	&__bar {
 		display: block;
 		background-color: colors.$white;
-		height: 3px;
-		width: 25px;
-		margin: 5px auto;
+		height: 0.1875rem;
+		width: 1.5625rem;
+		margin: 0.3125rem auto;
 
 		@include mixins.transition(all, 0.3s, ease);
 		@include mixins.border-radius(0.2rem);
@@ -125,7 +125,7 @@
 
 		&::after {
 			content: '';
-			height: 3px;
+			height: 0.1875rem;
 			background-color: colors.$yellow;
 			width: 100%;
 			position: absolute;
@@ -142,7 +142,7 @@
 }
 
 .intro {
-	max-width: 850px;
+	max-width: 53.125rem;
 	margin: auto;
 	padding: 0 2rem;
 	height: 100vh;
@@ -174,8 +174,8 @@
 			content: '';
 			display: block;
 			margin: 3rem auto 0;
-			height: 3px;
-			width: 60px;
+			height: 0.1875rem;
+			width: 3.75rem;
 			background-color: colors.$white;
 		}
 	}
@@ -185,7 +185,7 @@
 		text-transform: uppercase;
 		color: colors.$white;
 		outline: none;
-		border: 3px solid colors.$white;
+		border: 0.1875rem solid colors.$white;
 		padding: 0.7rem 2rem;
 		margin-top: 3rem;
 		background: none;
@@ -202,7 +202,7 @@
 	}
 }
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 53.125em) {
 	.header {
 		&__logo {
 			order: 1;
@@ -234,7 +234,7 @@
 	}
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 40.625em) {
 	.intro {
 		&__title {
 			&::after {
@@ -259,7 +259,7 @@
 }
 
 .top-text {
-	max-width: 950px;
+	max-width: 59.375rem;
 	margin: 6rem auto;
 	text-align: center;
 
@@ -293,8 +293,8 @@
 		&::after {
 			content: '';
 			display: block;
-			width: 60px;
-			height: 3px;
+			width: 3.75rem;
+			height: 0.1875rem;
 			margin: 2.5rem auto;
 			background-color: colors.$red;
 		}
@@ -315,10 +315,10 @@
 	gap: 2rem;
 
 	&__item {
-		max-width: 380px;
+		max-width: 23.75rem;
 		background-color: colors.$green;
 
-		@include mixins.border-radius(7px);
+		@include mixins.border-radius(0.4375rem);
 	}
 
 	&__image-container {
@@ -327,10 +327,10 @@
 		position: relative;
 
 		@include mixins.transition(all, 0.3s, ease);
-		@include mixins.border-radius(7px);
+		@include mixins.border-radius(0.4375rem);
 
 		&:hover {
-			@include mixins.translate(-10px, -10px);
+			@include mixins.translate(-0.625rem, -0.625rem);
 		}
 	}
 
@@ -358,7 +358,7 @@
 		max-width: 100%;
 
 		@include mixins.transition(all, 0.3s, ease);
-		@include mixins.border-radius(7px);
+		@include mixins.border-radius(0.4375rem);
 	}
 
 	&__title {
@@ -374,7 +374,7 @@
 	}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 43.75em) {
 	.top-text {
 		margin: 3rem auto;
 
@@ -404,11 +404,11 @@
 		flex: 1;
 		text-align: center;
 		padding: 6rem 2rem;
-		border-left: 1px solid colors.$white-alpha;
+		border-left: 0.0625rem solid colors.$white-alpha;
 	}
 
 	&__item:last-child {
-		border-right: 1px solid colors.$white-alpha;
+		border-right: 0.0625rem solid colors.$white-alpha;
 	}
 
 	&__text {
@@ -432,7 +432,7 @@
 	justify-content: center;
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 56.25em) {
 	.statistics {
 		&__item:nth-child(n) {
 			flex: none;
@@ -442,7 +442,7 @@
 	}
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 37.5em) {
 	.statistics {
 		&__item:nth-child(n) {
 			padding: 2rem;
@@ -484,13 +484,13 @@
 
 .services-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-	row-gap: 1px;
+	grid-template-columns: repeat(auto-fit, minmax(23.125rem, 1fr));
+	row-gap: 0.0625rem;
 	background-color: colors.$silver-light;
 	margin-bottom: 5rem;
 }
 
-@media all and (max-width: 780px) {
+@media all and (max-width: 48.75em) {
 	.services {
 		&__item {
 			padding: 2rem 1rem;
@@ -498,13 +498,13 @@
 	}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 43.75em) {
 	.services-container {
 		margin-bottom: 0;
 	}
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 31.25em) {
 	.services-container {
 		grid-template-columns: 1fr;
 		gap: 0;
@@ -534,7 +534,7 @@
 	&__images {
 		margin: 2rem auto 0;
 		padding: 0 2rem;
-		max-width: 600px;
+		max-width: 37.5rem;
 		position: relative;
 	}
 
@@ -547,7 +547,7 @@
 	&__iphone {
 		position: absolute;
 		display: block;
-		width: 200px;
+		width: 12.5rem;
 		bottom: -5%;
 		right: 0;
 
@@ -555,20 +555,20 @@
 	}
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 46.875em) {
 	.unique-design {
 		&__images {
-			max-width: 400px;
+			max-width: 25rem;
 		}
 
 		&__iphone {
-			max-width: 150px;
-			right: -20px;
+			max-width: 9.375rem;
+			right: -1.25rem;
 		}
 	}
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 31.25em) {
 	.unique-design {
 		&__iphone {
 			display: none;
@@ -584,7 +584,7 @@
 		display: block;
 		max-width: 100%;
 
-		@include mixins.border-radius(7px);
+		@include mixins.border-radius(0.4375rem);
 	}
 }
 
@@ -611,7 +611,7 @@
 
 	&__header {
 		position: relative;
-		border: 1px solid colors.$silver-light;
+		border: 0.0625rem solid colors.$silver-light;
 		padding: 1rem;
 		cursor: pointer;
 
@@ -635,7 +635,7 @@
 		font-weight: 300;
 		font-style: italic;
 		padding: 1.3rem;
-		border: 1px solid colors.$silver-light;
+		border: 0.0625rem solid colors.$silver-light;
 		border-top: none;
 
 		@extend %clamp-1;
@@ -650,7 +650,7 @@
 	}
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 59.375em) {
 	.we-do-container {
 		display: flex;
 		flex-wrap: wrap;
@@ -658,13 +658,13 @@
 	}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 43.75em) {
 	.we-do-container {
 		margin-bottom: 3rem;
 	}
 }
 
-@media all and (max-width: 530px) {
+@media all and (max-width: 33.125em) {
 	.accordion {
 		&__header {
 			padding: 0.7rem;
@@ -676,7 +676,7 @@
 	}
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 21.875em) {
 	.accordion {
 		&__icon {
 			display: none;
@@ -731,7 +731,7 @@
 		display: block;
 
 		&--message {
-			border: 3px solid colors.$green;
+			border: 0.1875rem solid colors.$green;
 			padding: 2.6rem;
 		}
 
@@ -762,8 +762,8 @@
 			content: '';
 			position: absolute;
 			display: block;
-			height: 3px;
-			width: 60px;
+			height: 0.1875rem;
+			width: 3.75rem;
 			background-color: colors.$red;
 			left: 0;
 			top: 50%;
@@ -773,7 +773,7 @@
 	}
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 50em) {
 	.slider {
 		&__item {
 			display: flex;
@@ -787,7 +787,7 @@
 	}
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 28.125em) {
 	.slider {
 		&__item {
 			padding: 2.6rem 3.6rem;
@@ -829,7 +829,7 @@
 		&-wrapper {
 			background-color: colors.$green;
 
-			@include mixins.border-radius(7px);
+			@include mixins.border-radius(0.4375rem);
 		}
 	}
 
@@ -838,11 +838,11 @@
 		cursor: pointer;
 		position: relative;
 
-		@include mixins.border-radius(7px);
+		@include mixins.border-radius(0.4375rem);
 		@include mixins.transition(all, 0.3s, ease);
 
 		&:hover {
-			@include mixins.translate(-10px, -10px);
+			@include mixins.translate(-0.625rem, -0.625rem);
 		}
 	}
 
@@ -867,7 +867,7 @@
 		max-width: 100%;
 		display: block;
 
-		@include mixins.border-radius(7px);
+		@include mixins.border-radius(0.4375rem);
 		@include mixins.transition(all, 0.3s, ease);
 	}
 
@@ -902,11 +902,11 @@
 	@include mixins.transition(all, 0.2s, ease);
 
 	&__item {
-		width: 55px;
+		width: 3.4375rem;
 		text-align: center;
 		background-color: colors.$yellow;
 		padding: 1rem;
-		border-right: 1px solid colors.$red;
+		border-right: 0.0625rem solid colors.$red;
 
 		@include mixins.transition(all, 0.2s, ease);
 
@@ -928,7 +928,7 @@
 	}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 43.75em) {
 	.team {
 		&__gallery-team {
 			margin-bottom: 3rem;
@@ -936,12 +936,12 @@
 	}
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 21.875em) {
 	.social {
 		flex-direction: column;
 
 		&__item {
-			border-bottom: 1px solid colors.$red;
+			border-bottom: 0.0625rem solid colors.$red;
 			border-right: none;
 			padding: 0.5rem;
 			width: auto;
@@ -973,7 +973,7 @@
 	}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 43.75em) {
 	.logos {
 		&__container {
 			gap: 2rem;
@@ -1046,7 +1046,7 @@
 	}
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 62.5em) {
 	.gallery-work {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
@@ -1057,7 +1057,7 @@
 	}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 43.75em) {
 	.gallery-work {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(5, 1fr);
@@ -1068,7 +1068,7 @@
 	}
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 28.125em) {
 	.gallery-work {
 		display: flex;
 		flex-wrap: wrap;
@@ -1102,7 +1102,7 @@
 	&__content {
 		text-align: center;
 		color: colors.$red;
-		padding: 3.3em 0;
+		padding: 3.3rem 0;
 		position: relative;
 		z-index: 2;
 	}
@@ -1117,8 +1117,8 @@
 		&::after {
 			content: '';
 			display: block;
-			height: 3px;
-			width: 60px;
+			height: 0.1875rem;
+			width: 3.75rem;
 			background-color: colors.$red;
 			margin: 1.5rem auto 0;
 		}
@@ -1160,7 +1160,7 @@
 	right: 0;
 	padding: 1rem;
 	margin: 1rem;
-	box-shadow: 0 0 10px colors.$button-top-shadow;
+	box-shadow: 0 0 0.625rem colors.$button-top-shadow;
 	z-index: 999;
 	cursor: pointer;
 	display: none;
