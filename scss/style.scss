@@ -61,14 +61,14 @@
 			left: 0;
 			right: 0;
 			padding: 1rem 1.5rem;
-			background-color: colors.$red;
+			background-color: colors.$purple;
 			box-shadow: 0 0 0.625rem colors.$silver;
 		}
 	}
 
 	&__logo {
 		color: colors.$white;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 700;
 		text-decoration: none;
 	}
@@ -120,13 +120,13 @@
 		position: relative;
 
 		&--active {
-			color: colors.$yellow;
+			color: colors.$green;
 		}
 
 		&::after {
 			content: '';
 			height: 0.1875rem;
-			background-color: colors.$yellow;
+			background-color: colors.$green;
 			width: 100%;
 			position: absolute;
 			top: 1.5rem;
@@ -196,8 +196,8 @@
 		@include mixins.transition(all, 0.5s, ease);
 
 		&:hover {
-			color: colors.$red;
-			border-color: colors.$red;
+			color: colors.$purple;
+			border-color: colors.$purple;
 		}
 	}
 }
@@ -296,7 +296,7 @@
 			width: 3.75rem;
 			height: 0.1875rem;
 			margin: 2.5rem auto;
-			background-color: colors.$red;
+			background-color: colors.$purple;
 		}
 	}
 
@@ -322,7 +322,7 @@
 	}
 
 	&__image-container {
-		background: linear-gradient(to bottom, colors.$red, colors.$yellow);
+		background: linear-gradient(to bottom, colors.$purple, colors.$green);
 		cursor: pointer;
 		position: relative;
 
@@ -462,7 +462,7 @@
 	}
 
 	&__icon {
-		color: colors.$green;
+		color: colors.$purple;
 		padding-right: 1.3rem;
 	}
 
@@ -602,7 +602,7 @@
 
 	&__icon {
 		position: absolute;
-		color: colors.$green;
+		color: colors.$purple;
 		left: 1rem;
 		top: 50%;
 
@@ -731,7 +731,7 @@
 		display: block;
 
 		&--message {
-			border: 0.1875rem solid colors.$green;
+			border: 0.1875rem solid colors.$purple;
 			padding: 2.6rem;
 		}
 
@@ -764,7 +764,7 @@
 			display: block;
 			height: 0.1875rem;
 			width: 3.75rem;
-			background-color: colors.$red;
+			background-color: colors.$purple;
 			left: 0;
 			top: 50%;
 
@@ -834,7 +834,7 @@
 	}
 
 	&__image-container {
-		background: linear-gradient(to bottom, colors.$red, colors.$yellow);
+		background: linear-gradient(to bottom, colors.$purple, colors.$green);
 		cursor: pointer;
 		position: relative;
 
@@ -904,9 +904,9 @@
 	&__item {
 		width: 3.4375rem;
 		text-align: center;
-		background-color: colors.$yellow;
+		background-color: colors.$green;
 		padding: 1rem;
-		border-right: 0.0625rem solid colors.$red;
+		border-right: 0.0625rem solid colors.$purple;
 
 		@include mixins.transition(all, 0.2s, ease);
 
@@ -915,7 +915,7 @@
 		}
 
 		&:hover {
-			background-color: colors.$red;
+			background-color: colors.$purple;
 		}
 	}
 
@@ -924,7 +924,7 @@
 	}
 
 	&__icon {
-		color: colors.$red;
+		color: colors.$purple;
 	}
 }
 
@@ -941,7 +941,7 @@
 		flex-direction: column;
 
 		&__item {
-			border-bottom: 0.0625rem solid colors.$red;
+			border-bottom: 0.0625rem solid colors.$purple;
 			border-right: none;
 			padding: 0.5rem;
 			width: auto;
@@ -993,7 +993,7 @@
 
 	&__item {
 		position: relative;
-		background: linear-gradient(to bottom, colors.$red, colors.$yellow);
+		background: linear-gradient(to bottom, colors.$purple, colors.$green);
 		cursor: pointer;
 	}
 
@@ -1101,7 +1101,7 @@
 
 	&__content {
 		text-align: center;
-		color: colors.$red;
+		color: colors.$purple;
 		padding: 3.3rem 0;
 		position: relative;
 		z-index: 2;
@@ -1119,7 +1119,7 @@
 			display: block;
 			height: 0.1875rem;
 			width: 3.75rem;
-			background-color: colors.$red;
+			background-color: colors.$purple;
 			margin: 1.5rem auto 0;
 		}
 	}
@@ -1139,7 +1139,7 @@
 
 	&__link {
 		text-decoration: none;
-		color: colors.$red;
+		color: colors.$purple;
 
 		@extend %clamp-0-9;
 		@include mixins.transition(all, 0.3s, ease);
@@ -1154,11 +1154,11 @@
 // ------------TO THE TOP BUTTON----------------
 // ---------------------------------------------
 .button-top {
-	background-color: colors.$red;
+	background-color: colors.$purple;
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	padding: 1rem;
+	padding: 1rem 0.9rem;
 	margin: 1rem;
 	box-shadow: 0 0 0.625rem colors.$button-top-shadow;
 	z-index: 999;
@@ -1169,7 +1169,7 @@
 	@include mixins.transition(all, 0.3s, ease);
 
 	&:hover {
-		background-color: colors.$red-dark;
+		background-color: colors.$purple-dark;
 	}
 
 	&__icon {

@@ -1,49 +1,19 @@
- <!-- --------STATS-------- -->
- <a href="https://github.com/ochagovdanil/mogo/graphs/contributors">
-	<img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/ochagovdanil/mogo.svg" />
-</a>
-<a href="https://github.com/ochagovdanil/mogo/network/members">
-	<img alt="Issues" src="https://img.shields.io/github/forks/ochagovdanil/mogo.svg" />
-</a>
-<a href="https://github.com/ochagovdanil/mogo/stargazers">
-	<img alt="Issues" src="https://img.shields.io/github/stars/ochagovdanil/mogo.svg" />
-</a>
-<a href="https://github.com/ochagovdanil/mogo/issues">
-	<img alt="Issues" src="https://img.shields.io/github/issues/ochagovdanil/mogo.svg" />
-</a>
-<a href="https://opensource.org/licenses/MIT">
-	<img alt="Issues" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-</a>
-
 <!-- --------LOGO-------- -->
 <br />
 <div align="center">
-	<img src="favicon.svg" alt="Logo" />
-	<p><strong>Mogo - Creative Template</strong></p>
-	<a href="https://ochagovdanil.github.io/mogo/" target="_blank">Visit the page</a>
+	<img src="favicon.svg" alt="Logo" height="130" />
+	<p><strong>Karman Line - наш первый полет в космос</strong></p>
+	<a href="https://ochagovdanil.github.io/karman-line/" target="_blank">Открыть страницу</a>
 </div>
-
-<!-- --------TABLE OF CONTENTS-------- -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
 
 <!-- --------ABOUT THE PROJECT-------- -->
 
-## About The Project
+## О проекте
 
 <div align="center">
 	<img src="img/preview.jpg" alt="Preview" />
 </div>
-<p><strong>Mogo</strong> - creative template built via:</p>
+<p><strong>Karman Line</strong> - использует следующие технологии:</p>
 <ul>
 	<li>HTML</li>
 	<li>CSS</li>
@@ -55,31 +25,43 @@
 	<li>Font Awesome Icons</li>
 </ul>
 
+<!-- SET UP INSTRUCTIONS -->
+
+## Инструкция по запуску приложения
+
+Открыть файл `index.html` с помощью вашего любимого браузера.
+
 <!-- --------CONTRIBUTING-------- -->
 
-## Contributing
+## Контрибуция
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Контрибуция делает сообщество с открытым исходным кодом удивительным местом для обучения, вдохновения и творчества. Любой ваш вклад **высоко ценится.**
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Если у вас есть предложение по улучшению, пожалуйста, сделайте fork репозитория и создайте pull request. Вы также можете просто создать issue с меткой "enhancement".
+Не забудьте поставить star проекту! Спасибо еще раз!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork репозиторий
+2. Создайте вашу Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Сделайте коммиты с изменениями (`git commit -m 'Add some AmazingFeature'`)
+4. Push в ветку (`git push origin feature/AmazingFeature`)
+5. Откройте Pull Request
 
 <!-- --------LICENSE-------- -->
 
-## License
+## Лицензия
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Распространяется по лицензии MIT. Смотрите `LICENSE` для получения дополнительной информации.
 
 <!-- --------CONTACT-------- -->
 
-## Contact
+## Связь со мной
 
-Danil Ochagov - danilochagov@gmail.com
+Очагов Данил
 
-Project Link: [https://github.com/ochagovdanil/mogo](https://github.com/ochagovdanil/mogo)
+Email: danilochagov@gmail.com
+
+Telegram: @danilochagov
+
+VK: https://vk.com/danilochagov
+
+Ссылка на Github проект: [https://github.com/ochagovdanil/karman-line](https://github.com/ochagovdanil/karman-line)
